@@ -4,7 +4,7 @@ using namespace std;
 int arr[] = { 3, 4, 65 };
 int mod = 100000;
 int visited[100000];
-int size = 3;
+int size = sizeof(arr) / sizeof(arr[0]);
 
 int getMinimumStep(int start, int end) {
 
@@ -40,6 +40,6 @@ int main() {
     int start = 7;
     int end = 66175;
 
-    cout << getMinimumStep(start, end);
+    cout << "answer : " << getMinimumStep(start, end);
 
 }
