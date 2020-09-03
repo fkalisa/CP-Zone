@@ -38,7 +38,8 @@ void prefix(int lsb [], string s, int n) {
 int main() {
 
 	/*
-	pattern matching using prefix function
+		Knuth–Morris–Pratt algorithm
+		pattern matching using prefix function
 	*/
 
 	string pattern = "aa";
