@@ -42,7 +42,7 @@ int main() {
 	int n = s.size();
 
 	int lsb [n];
-	memset(lsb, 0, n);
+	memset(lsb, 0, sizeof(lsb));
 	prefix(lsb, s, n);
 
 
