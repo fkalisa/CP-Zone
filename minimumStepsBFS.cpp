@@ -37,6 +37,9 @@ int getMinimumStep(int start, int end) {
 
 }
 int main() {
+    /*
+        https://www.geeksforgeeks.org/minimum-steps-to-reach-end-from-start-by-performing-multiplication-and-mod-operations-with-array-elements/
+    */
     int start = 7;
     int end = 66175;
 
