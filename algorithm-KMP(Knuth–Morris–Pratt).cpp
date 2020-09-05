@@ -47,7 +47,7 @@ int main() {
 	string result = pattern + "$" + s;
 	int n = result.size();
 	int lsb [n];
-	memset(lsb, 0, sizeof(n));
+	memset(lsb, 0, sizeof(lsb));
 	prefix(lsb, result, n);
 
 
