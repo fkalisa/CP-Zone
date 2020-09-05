@@ -4,8 +4,8 @@ using namespace std;
 
 int kThGreaterElement(int arr[], int n, int k) {
 	/*
-		Known as maximum priority queue --> q : 1, 2, 3, 4
-		The counter part is with less <int> --> : q : 4, 3, 2, 1
+		Known as minimum priority queue --> q : 1, 2, 3, 4
+		The counter part (maximum pririty queue) is with less <int> --> : q : 4, 3, 2, 1
 	*/
 	priority_queue<int, std::vector<int>, greater<int>> q;
 
