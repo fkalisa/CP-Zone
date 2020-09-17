@@ -19,15 +19,7 @@ void init(int n) {
 	}
 }
 
-void eulertour(int node, int par = 0) {
-	cout << node << " ";
-	for (auto it : adj[node]) {
-		if (it != par) {
-			eulertour(it, node);
-			cout << node << " ";
-		}
-	}
-}
+
 
 
 int main() {
@@ -63,7 +55,7 @@ int main() {
 	cin >> n;
 
 	memset(adjs, 0, sizeof adjs);
-
+	init(n);
 	eulertour(1);
 
 }
