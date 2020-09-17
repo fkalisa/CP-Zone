@@ -20,7 +20,15 @@ void init(int n) {
 }
 
 
-
+void eulertour(int node, int par = 0) {
+	cout << node << " ";
+	for (auto it : adjs[node]) {
+		if (it != par) {
+			eulertour(it, node);
+			cout << node << " ";
+		}
+	}
+}
 
 int main() {
 #ifndef ONLINE_JUDGE
@@ -33,6 +41,8 @@ int main() {
 #endif
 
 	/*
+
+	Euler Tour is with DFS
 
 	inputs :
 
@@ -47,8 +57,6 @@ int main() {
 	output :
 
 	1 2 1 3 5 3 6 3 1 4 7 4 1
-
-
 	*/
 
 	int n;
