@@ -32,7 +32,8 @@ void dfs(int node, int parent, int level) {
 		{
 			dfs(adjs[node][i], node, level + 1);
 			//subtree sum
-			subtree[node] = subtree[node] + adjs[node][i] - 1;
+			subtree[node] = subtree[node] + subtree[adjs[node][i]];
+
 		}
 	}
 }
