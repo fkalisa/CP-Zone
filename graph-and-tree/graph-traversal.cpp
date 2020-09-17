@@ -25,15 +25,15 @@ void init(int n) {
 }
 
 
-void dfs(int node, int parent) {
+void dfs(int node, int parent, int level) {
 
-	cout << node << " ";
+	cout << "node : " <<  node << " , level: " << level << endl;
 
 	for (int i = 0; i < adjs[node].size(); ++i)
 	{
 		if (adjs[node][i] != parent)
 		{
-			dfs(adjs[node][i], node);
+			dfs(adjs[node][i], node, level + 1);
 		}
 	}
 
@@ -90,6 +90,6 @@ int main() {
 	cout << "-----bfs traversal-----" << endl;
 	bfs();
 	cout << "-----dfs traversal-----" << endl;
-	dfs();
+	dfs(1, 0, 0);
 
 }
