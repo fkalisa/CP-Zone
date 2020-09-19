@@ -1,10 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
+extern const int N = 100000;
 
+int dp[N + 1];
 int compute(int arr[], int n, int index) {
 
 	if (index == n - 1) {
 		return 0;
+	}
+
+	if (dp[index] != -1)
+	{
+		return dp[index];
 	}
 
 	int left = abs(arr[index] - arr[index + 1]) + compute(arr, n, index + 1);
@@ -14,7 +21,7 @@ int compute(int arr[], int n, int index) {
 		right =  abs(arr[index] - arr[index + 2 ]) + compute(arr, n, index + 2);
 	}
 
-	return min(left, right);
+	return dp[index] = min(left, right);
 
 }
 
@@ -49,6 +56,8 @@ int main() {
 
 	int n;
 	cin >> n;
+	memset(dp, -1, sizeof dp);
+
 	int arr[n];
 
 	for (int i = 0; i < n; ++i)
