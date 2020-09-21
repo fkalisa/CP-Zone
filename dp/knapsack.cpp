@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+extern const int N = 1000000;
+extern const int W = 1000000;
 
+int dp[N + 1][15];
 
 int getMaxValue(int values[], int weights[], int n, int maxWeight, int index) {
 
@@ -9,13 +12,18 @@ int getMaxValue(int values[], int weights[], int n, int maxWeight, int index) {
 		return 0;
 	}
 
+	if (dp[n][maxWeight] != -1)
+	{
+		return dp[n][maxWeight];
+	}
+
 	int maxi = INT_MIN;
 	if (weights[index] <= maxWeight)
 	{
 
-		maxi =  max(maxi, values[index] + getMaxValue(values, weights, n, maxWeight - weights[index], index + 1));
+		maxi =  values[index] + getMaxValue(values, weights, n, maxWeight - weights[index], index + 1);
 	}
-	return max (maxi, getMaxValue(values, weights, n, maxWeight, index + 1));
+	return dp[n][maxWeight] = max (maxi, getMaxValue(values, weights, n, maxWeight, index + 1));
 }
 
 int main() {
@@ -42,6 +50,7 @@ int main() {
 	{
 		cin >> weights[i] >>  values[i];
 	}
+	memset(dp, -1, sizeof dp);
 
 	cout << getMaxValue(values, weights, n, maxWeight, 0);
 
