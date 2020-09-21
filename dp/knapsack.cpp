@@ -35,7 +35,22 @@ int main() {
 //for writting output to output.txt
 	freopen("../../../env/output.txt", "w", stdout);
 #endif
+	/*
 
+		https://atcoder.jp/contests/dp/tasks/dp_d
+
+		input :
+
+		3 8
+		3 30
+		4 50
+		5 60
+
+		output :
+
+		90
+
+	*/
 
 	int n;
 	cin >> n;
