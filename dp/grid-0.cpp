@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-
 int compute(int matrix[][], int i, int j, int n, int m) {
 
 
@@ -11,8 +9,14 @@ int compute(int matrix[][], int i, int j, int n, int m) {
 		return 1;
 	}
 
-	int left = compute( matrix,  i + 1 ,  j,  destI,  destJ);
-	int right = compute( matrix,  i ,  j + 1,  destI,  destJ);
+	int left;
+	if(i+1 < n){
+		left =compute( matrix,  i + 1 ,  j,  n,  m);
+	}
+	int right;
+	if(j+1 < m){	
+		compute( matrix,  i ,  j + 1,  n,  m);
+	}
 
 	return left + right;
 }
