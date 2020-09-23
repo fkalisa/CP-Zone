@@ -58,7 +58,17 @@ int main() {
 //for writting output to output.txt
 	freopen("../../../env/output.txt", "w", stdout);
 #endif
+	/*
 
+	https://www.geeksforgeeks.org/edit-distance-dp-5/
+
+	input :
+		sunday
+		saturday
+
+	output :
+		3
+	*/
 
 	string s1, s2;
 	cin >> s1 >> s2;
