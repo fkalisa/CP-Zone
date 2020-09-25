@@ -48,16 +48,12 @@ int main() {
 	freopen("../../env/output.txt", "w", stdout);
 #endif
 
-
-
 	string s = "ABC";
 
-
+	compute1(s);
+	cout << "----------" << endl;
 	compute2(s, 0, "");
 
 	return 0;
-
-
-
 
 }
