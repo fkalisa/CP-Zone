@@ -71,6 +71,31 @@ int main() {
 //for writting output to output.txt
 	freopen("../../../env/output.txt", "w", stdout);
 #endif
+
+	/*
+		inputs :
+
+		9 14
+		0 1 4
+		0 7 8
+		1 7 11
+		7 6 1
+		7 8 7
+		1 2 8
+		2 8 2
+		8 6 6
+		6 5 2
+		2 5 4
+		2 3 7
+		3 5 14
+		3 4 9
+		5 4 10
+
+		Output :
+
+		min dist from 0 to 8 : 14
+
+	*/
 	int n, m;
 	cin >> n >> m;
 
