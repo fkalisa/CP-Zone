@@ -25,6 +25,10 @@ void build(int ind, int low, int high) {
 
 }
 
+/*
+	Time complexity : log(N)
+*/
+
 int query(int ind, int low, int high, int l, int r) {
 
 	// inside - l low high r
@@ -39,7 +43,7 @@ int query(int ind, int low, int high, int l, int r) {
 	// low high l r , l r low high
 
 	if (high < l || low > r) {
-		return INT_MIN;
+		return 0;
 	}
 
 	int middle = (low + high) / 2;
@@ -50,6 +54,22 @@ int query(int ind, int low, int high, int l, int r) {
 	return left + right;
 }
 
+void update(int ind, int value, int i, int low, int high)
+{
+	if (high == low)
+	{
+		seg[ind] += value;
+		return;
+	}
+	int middle = (high + low) / 2;
+	if (i < middle) {
+		update( ind * 2 + 1,  value, i, low,  middle);
+	} else {
+		update( ind * 2 + 2,  value, i, middle + 1,  high);
+	}
+
+	seg[ind] = seg[ind * 2 + 1] + seg[ind * 2 + 2] ;
+}
 
 /*
 	completely lies (included)(return nodes)

@@ -50,6 +50,22 @@ int query(int ind, int low, int high, int l, int r) {
 	return max(left, right);
 }
 
+void update(int ind, int value, int i, int low, int high)
+{
+	if (high == low)
+	{
+		seg[ind] += value;
+		return;
+	}
+	int middle = (high + low) / 2;
+	if (i < middle) {
+		update( ind * 2 + 1,  value, i, low,  middle);
+	} else {
+		update( ind * 2 + 2,  value, i, middle + 1,  high);
+	}
+
+	seg[ind] = max(seg[ind * 2 + 1], seg[ind * 2 + 2] );
+}
 
 /*
 	completely lies (included)(return nodes)
@@ -95,6 +111,9 @@ int main() {
 
 	cout << query(0, 0, n - 1, l, r) << endl;
 
+	update(0, 6, 4, 0, n - 1);
+
+	cout << query(0, 0, n - 1, l, 4) << endl;
 
 	return 0;
 }
