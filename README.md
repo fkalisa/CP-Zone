@@ -10,8 +10,8 @@
   - solution with product rule (3)
   Example : phi(5)= 4  
   1- if n is prime -> phi(n) = n-1  
-  2- if a = p^n -> phi(a)= p^n - p^(n-1) 
-  3- phi(n) = n*((1-1/p1)* ....* (1-1/pi))
+  2- if a = p^n -> phi(a)= p^n - p^(n-1)  
+  3- phi(n) = n*((1-1/p1)* ....* (1-1/pi))  
 
 ### Sieve
 Sieve is based on creation an array from 1 to n
