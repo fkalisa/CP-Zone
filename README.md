@@ -17,7 +17,7 @@
 Sieve is based on creation an array from 1 to n
   - sieve of eratosthenes : find if a given number is prime or not, Sieve array will contain the boolean stating if a number is prime or not  
   - Modified Sieve : find prime factors of a given number, Sieve array will contain the smallest prime factor
-  - Segmented Sieve : 
+  - Segmented Sieve : counting primes in range, n >=1 and n<=10e9 (big!!) and the delta is 10e4
 
 ### Kadane's Algorithm
 Used to find the max sum subarray
