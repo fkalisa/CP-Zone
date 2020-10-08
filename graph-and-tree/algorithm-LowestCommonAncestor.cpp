@@ -37,10 +37,10 @@ int main() {
 #ifndef ONLINE_JUDGE
 
 //for getting input from input.txt
-	freopen("input.txt", "r", stdin);
+	freopen("../../../env/input.txt", "r", stdin);
 
 //for writting output to output.txt
-	freopen("output.txt", "w", stdout);
+	freopen("../../../env/output.txt", "w", stdout);
 #endif
 
 	/*
