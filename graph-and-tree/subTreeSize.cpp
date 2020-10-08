@@ -42,14 +42,15 @@ int main() {
 #ifndef ONLINE_JUDGE
 
 //for getting input from input.txt
-	freopen("input.txt", "r", stdin);
+	freopen("../../../env/input.txt", "r", stdin);
 
 //for writting output to output.txt
-	freopen("output.txt", "w", stdout);
+	freopen("../../../env/output.txt", "w", stdout);
 #endif
 
 	/*
-
+	input :
+	8
 	7 4
 	1 2
 	1 3
@@ -57,14 +58,18 @@ int main() {
 	3 5
 	3 6
 	4 7
+
+	output :
+
+	array containing the size of the subtree for each node
+
 	*/
 
 
 
 	int n;
 	cin >> n;
-	int k;
-	cin >> k;
+
 
 	memset(adjs, 0, sizeof adjs);
 	memset(lev, 0, sizeof lev);
