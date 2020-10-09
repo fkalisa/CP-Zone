@@ -3,7 +3,7 @@
 using namespace std;
 
 
-void gcd1(int a, int b) {
+int gcd1(int a, int b) {
 
 	while (a != 0 && b != 0) {
 		if (a > b)
@@ -14,15 +14,11 @@ void gcd1(int a, int b) {
 		}
 	}
 
-	if (a == 0) {
-		cout << b << endl;
-	} else {
-		cout << a << endl;
-	}
+	return (a == 0) ? b : a;
 }
 
 // brute force
-void gcd2(int a, int b) {
+int gcd2(int a, int b) {
 
 	int maxi = 1;
 
@@ -33,8 +29,17 @@ void gcd2(int a, int b) {
 			maxi = max(i, maxi);
 		}
 	}
-	cout << maxi << endl;
 
+	return maxi;
+}
+
+
+int gcd3(int a, int b)
+{
+	if (a == 0)
+		return b;
+
+	return gcd3(b % a, a);
 }
 
 int main() {
@@ -51,12 +56,13 @@ int main() {
 	int a = 27;
 	int b = 15;
 
-	gcd1(a, b);
+	cout << gcd1(a, b) << endl;
 
 	int c = 27;
 	int d = 15;
-	gcd2(c, d);
+	cout << gcd2(c, d) << endl;
 
+	cout << gcd3(27, 15) << endl;
 
 	return 0;
 }
