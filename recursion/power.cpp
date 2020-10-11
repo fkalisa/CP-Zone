@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
+/*
+Time complexity : O(log(N))
+*/
 long long power(int b, int p, long long mod) {
 
 	if (p == 0) {
