@@ -61,6 +61,38 @@ void printStrictlyIncreasingCombo(int num, int sum, vector<int> &v) {
 	}
 }
 
+void printIncreasingCombo(int num, int sum, vector<int> &v) {
+
+	if (sum == 0)
+	{
+		for (int i = 0; i < v.size(); ++i)
+		{
+			cout << v[i] << " ";
+		}
+		cout << endl;
+	}
+
+	if (v.empty()) {
+		for (int i = 1; i <= sum; ++i)
+		{
+			v.push_back(i);
+			printStrictlyIncreasingCombo(i, sum - i, v);
+			v.pop_back();
+		}
+	} else {
+		for (int i = v.back(); i <= sum; ++i)
+		{
+			v.push_back(i);
+			printStrictlyIncreasingCombo(i , sum - i, v);
+			v.pop_back();
+		}
+
+
+	}
+
+
+}
+
 
 int main() {
 #ifndef ONLINE_JUDGE
@@ -100,9 +132,14 @@ int main() {
 	vector<int> v;
 	printCombo(1, 5, v);
 	cout << endl;
+	v.clear();
 	printStrictlyIncreasingCombo(1, 5, v);
 	cout << endl;
-	printAllCombo(1, 3, v);
+	v.clear();
+	printAllCombo(1, 5, v);
+	cout << endl;
+	v.clear();
+	printIncreasingCombo(1, 5, v);
 
 
 
