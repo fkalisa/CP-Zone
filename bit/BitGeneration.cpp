@@ -13,29 +13,24 @@ int main() {
 	freopen("../../../env/output.txt", "w", stdout);
 #endif
 
+	/*
+		Time complexity : O(N*2^N)
+	*/
 
 	int n = 3;
 	int size = 1 << n;
 
-
-	std::vector<int> v(n);
-
-	for (int i = 0; i < size; ++i)
+	for (int i = 0; i < size; ++i) //N
 	{
-		int tmp = i;
-		int counter = 0;
-		while (tmp) {
 
-			v[counter] = (tmp & 1) ;
-
-			tmp = tmp >> 1;
-			counter++;
-
-		}
-
-		for (auto it : v)
+		for (int j = 0; j < n; ++j) // 2^N
 		{
-			cout << it;
+			if (i & (1 < j))
+			{
+				cout << 1;
+			} else {
+				cout << 0;
+			}
 		}
 		cout << endl;
 	}
