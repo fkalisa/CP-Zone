@@ -27,11 +27,17 @@ Used to find the max sum subarray
 
 ### KMP(Knuth–Morris–Pratt)'s  Algorithm
 
+### Dutch National Flag Algorithm 
+
+### Devide and conquer Algorithm
+
+##### Merge Sort (see Sorting Algorithms)
+##### Meet in the middle Algorithm
 
 ## Sorting Algorithms
 
-### Insertion Sort
+##### Insertion Sort
 
-### Selection Sort
+##### Selection Sort
 
-### Merge Sort
+##### Merge Sort
