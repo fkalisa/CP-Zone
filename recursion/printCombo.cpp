@@ -25,7 +25,7 @@ void printCombo(int num, int sum, vector<int> &v) {
 	}
 }
 
-void printAllCombo(int num, int sum, vector<int> &v) {
+void printAllCombo(int sum, vector<int> &v) {
 
 	if (sum == 0)
 	{
@@ -41,7 +41,7 @@ void printAllCombo(int num, int sum, vector<int> &v) {
 	for (int i = 1; i <= sum; ++i)
 	{
 		v.push_back(i);
-		printAllCombo(i, sum - i, v );
+		printAllCombo( sum - i, v );
 		v.pop_back();
 	}
 }
@@ -67,7 +67,7 @@ void printStrictlyIncreasingCombo(int num, int sum, vector<int> &v) {
 	}
 }
 
-void printIncreasingCombo(int num, int sum, vector<int> &v) {
+void printIncreasingCombo( int sum, vector<int> &v) {
 
 	if (sum == 0)
 	{
@@ -83,14 +83,14 @@ void printIncreasingCombo(int num, int sum, vector<int> &v) {
 		for (int i = 1; i <= sum; ++i)
 		{
 			v.push_back(i);
-			printStrictlyIncreasingCombo(i, sum - i, v);
+			printIncreasingCombo( sum - i, v);
 			v.pop_back();
 		}
 	} else {
 		for (int i = v.back(); i <= sum; ++i)
 		{
 			v.push_back(i);
-			printStrictlyIncreasingCombo(i , sum - i, v);
+			printIncreasingCombo( sum - i, v);
 			v.pop_back();
 		}
 
@@ -143,10 +143,10 @@ int main() {
 	printStrictlyIncreasingCombo(1, 5, v);
 	cout << endl;
 	v.clear();
-	printAllCombo(1, 5, v);
+	printAllCombo( 5, v);
 	cout << endl;
 	v.clear();
-	printIncreasingCombo(1, 5, v);
+	printIncreasingCombo(5, v);
 
 
 
