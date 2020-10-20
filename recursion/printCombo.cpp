@@ -13,6 +13,8 @@ void printCombo(int num, int sum, vector<int> &v) {
 			cout << v[i] << " ";
 		}
 		cout << endl;
+
+		return;
 	}
 
 	for (int i = num; i <= sum; ++i)
@@ -32,6 +34,8 @@ void printAllCombo(int num, int sum, vector<int> &v) {
 			cout << v[i] << " ";
 		}
 		cout << endl;
+
+		return;
 	}
 
 	for (int i = 1; i <= sum; ++i)
@@ -51,6 +55,8 @@ void printStrictlyIncreasingCombo(int num, int sum, vector<int> &v) {
 			cout << v[i] << " ";
 		}
 		cout << endl;
+
+		return;
 	}
 
 	for (int i = num; i <= sum; ++i)
@@ -70,6 +76,7 @@ void printIncreasingCombo(int num, int sum, vector<int> &v) {
 			cout << v[i] << " ";
 		}
 		cout << endl;
+		return;
 	}
 
 	if (v.empty()) {
