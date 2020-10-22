@@ -12,9 +12,9 @@ int getMaxValue(int values[], int weights[], int n, int maxWeight, int index) {
 		return 0;
 	}
 
-	if (dp[n][maxWeight] != -1)
+	if (dp[index][maxWeight] != -1)
 	{
-		return dp[n][maxWeight];
+		return dp[index][maxWeight];
 	}
 
 	int maxi = INT_MIN;
@@ -23,7 +23,7 @@ int getMaxValue(int values[], int weights[], int n, int maxWeight, int index) {
 
 		maxi =  values[index] + getMaxValue(values, weights, n, maxWeight - weights[index], index + 1);
 	}
-	return dp[n][maxWeight] = max (maxi, getMaxValue(values, weights, n, maxWeight, index + 1));
+	return dp[index][maxWeight] = max (maxi, getMaxValue(values, weights, n, maxWeight, index + 1));
 }
 
 int main() {
@@ -52,11 +52,8 @@ int main() {
 
 	*/
 
-	int n;
-	cin >> n;
-
-	int maxWeight;
-	cin >> maxWeight;
+	int n, maxWeight;
+	cin >> n >> maxWeight;
 
 	int values[n];
 	int weights[n];
