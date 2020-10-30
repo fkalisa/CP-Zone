@@ -60,6 +60,13 @@ int main() {
 
 	/*
 		Time complexity O(Nlog(N))
+		mergeSort : logN
+		merge : N
+		application :
+			- sort
+			- Inversion Count - https://www.spoj.com/problems/INVCNT/
+			- Revrese pairs - https://leetcode.com/problems/reverse-pairs/solution/
+		
 	*/
 	int arr [] = {7, 6, 4, 0, 9, 2, 1, 3, 8};
 	int n = 8;
