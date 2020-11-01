@@ -25,12 +25,15 @@ Given a Linear Diophantine Equation (LDE) a*x+b*y=c, we can deduct that c % gcd(
 ### Kadane's Algorithm
 Used to find the max sum subarray
 
-### KMP(Knuth–Morris–Pratt)'s  Algorithm
+
 
 ### Dutch National Flag Algorithm 
 
 ### Kahn's Algorithm
-### Robin Karp Algorithm
+### String Algorithm
+##### KMP(Knuth–Morris–Pratt)'s  Algorithm
+##### Robin Karp Algorithm
+##### Z Algorithm
 
 ### Devide and conquer Algorithm
 
