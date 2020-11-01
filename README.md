@@ -29,7 +29,8 @@ Used to find the max sum subarray
 
 ### Dutch National Flag Algorithm 
 
-### Kahn's algorithm
+### Kahn's Algorithm
+### Robin Karp Algorithm
 
 ### Devide and conquer Algorithm
 
