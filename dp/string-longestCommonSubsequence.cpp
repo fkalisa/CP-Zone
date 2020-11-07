@@ -23,10 +23,8 @@ int compute(string s1, string s2, int i, int j, int dp[r][c]) {
 		return dp[i][j] = 1 + compute(s1, s2, i + 1, j + 1, dp);
 	}
 
-
-
 	int left =  compute(s1, s2, i + 1, j, dp);
-	int  right = compute(s1, s2, i , j + 1, dp);
+	int right = compute(s1, s2, i , j + 1, dp);
 
 	return dp[i][j] = max(left, right);
 
