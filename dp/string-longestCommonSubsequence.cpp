@@ -14,8 +14,13 @@ int compute(string s1, string s2, int i, int j, int dp[r][c]) {
 		return 0;
 	}
 
+	if (dp[i][j] != -1)
+	{
+		return dp[i][j];
+	}
+
 	if (s1[i] == s2[j]) {
-		return 1 + compute(s1, s2, i + 1, j + 1, dp);
+		return dp[i][j] = 1 + compute(s1, s2, i + 1, j + 1, dp);
 	}
 
 
@@ -23,7 +28,7 @@ int compute(string s1, string s2, int i, int j, int dp[r][c]) {
 	int left =  compute(s1, s2, i + 1, j, dp);
 	int  right = compute(s1, s2, i , j + 1, dp);
 
-	return max(left, right);
+	return dp[i][j] = max(left, right);
 
 }
 
