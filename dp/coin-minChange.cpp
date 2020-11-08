@@ -35,14 +35,13 @@ int getMinCoinChange2(int arr[], int n, int i, int amount) {
 	}
 
 
-	int left = 0;
-	int right = 0;
+	int left = INT_MAX;
 
 	if (arr[i] <= amount)
 	{
 		left = 1 + getMinCoinChange2(arr, n, i,  amount - arr[i]);
 	}
-	right = getMinCoinChange2(arr, n, i + 1,  amount);
+	int right = getMinCoinChange2(arr, n, i + 1,  amount);
 
 	return min(left, right);
 
