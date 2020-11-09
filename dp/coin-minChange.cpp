@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define int long long
+
 extern const int N = 1000000;
 
 int getMinCoinChange(int arr[], int n, int amount) {
@@ -34,10 +36,9 @@ int getMinCoinChange2(int arr[], int n, int i, int amount) {
 		return INT_MAX;
 	}
 
-
 	int left = INT_MAX;
 
-	if (arr[i] <= amount)
+	if (amount >= arr[i])
 	{
 		left = 1 + getMinCoinChange2(arr, n, i,  amount - arr[i]);
 	}
@@ -50,7 +51,7 @@ int getMinCoinChange2(int arr[], int n, int i, int amount) {
 
 
 
-int main() {
+signed main() {
 
 #ifndef ONLINE_JUDGE
 
@@ -67,18 +68,15 @@ int main() {
 
 		10
 		3
-		1
-		3
-		4
+		1 3 4
+
+		output :
 
 		example 2
 
 		10
 		4
-		7
-		5
-		4
-		1
+		7 5 4 1
 
 	*/
 
@@ -96,9 +94,7 @@ int main() {
 
 	int dp[amount + 1][n + 1];
 	memset(dp, -1, sizeof dp);
+
 	cout << getMinCoinChange(arr, n, amount) << endl;
 	cout << getMinCoinChange2(arr, n, 0, amount) << endl;
-
-
-
 }
