@@ -40,6 +40,8 @@ Used to find the max sum subarray
 ##### Merge Sort (see Sorting Algorithms)
 ##### Meet in the middle Algorithm
 
+## Euler Tour Algorithm
+
 ## Sorting Algorithms
 
 ##### Insertion Sort
