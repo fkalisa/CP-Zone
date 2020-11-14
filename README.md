@@ -25,7 +25,7 @@ Given a Linear Diophantine Equation (LDE) a*x+b*y=c, we can deduct that c % gcd(
 ### Kadane's Algorithm
 Used to find the max sum subarray
 
-
+### LCA (Lowest Common Ancestor - nearest ancestor)
 
 ### Dutch National Flag Algorithm 
 
