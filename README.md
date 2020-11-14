@@ -25,7 +25,7 @@ Given a Linear Diophantine Equation (LDE) a*x+b*y=c, we can deduct that c % gcd(
 ### Kadane's Algorithm
 Used to find the max sum subarray
 
-### LCA (Lowest Common Ancestor - nearest ancestor)
+
 
 ### Dutch National Flag Algorithm 
 
@@ -39,8 +39,17 @@ Used to find the max sum subarray
 
 ##### Merge Sort (see Sorting Algorithms)
 ##### Meet in the middle Algorithm
+### Segment tree 
+Minumum range query
 
 ## Euler Tour Algorithm
+use a vector 
+
+### LCA (Lowest Common Ancestor - nearest ancestor)
+Between 2 numbers a and b
+Use Euler Tour Algorithm
+Use the height, the minimum height between a and b
+
 
 ## Sorting Algorithms
 
