@@ -43,7 +43,7 @@ Used to find the max sum subarray
 Minumum range query
 
 ## Euler Tour Algorithm
-use a vector 
+- use a vector 
 
 ### LCA (Lowest Common Ancestor - nearest ancestor)
 Between 2 numbers a and b
@@ -51,7 +51,8 @@ Use Euler Tour Algorithm
 Use the height, the minimum height between a and b
 
 ### Binary lifting
-
+- Maintain a dp array dp[node][x] -> 2^x 
+-
 ## Sorting Algorithms
 
 ##### Insertion Sort
