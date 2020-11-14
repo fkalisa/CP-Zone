@@ -50,6 +50,7 @@ Between 2 numbers a and b
 Use Euler Tour Algorithm
 Use the height, the minimum height between a and b
 
+### Binary lifting
 
 ## Sorting Algorithms
 
