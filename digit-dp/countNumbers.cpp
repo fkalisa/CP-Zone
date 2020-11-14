@@ -3,7 +3,37 @@ using namespace std;
 
 #define int long long
 
+int countBruteForce(int d, int k, int l, int r) {
+
+	int ans = 0;
+	for (int i = l; i <= r; ++i)
+	{
+
+
+		int tmp = i;
+		int counter = 0;
+
+		while (tmp) {
+			int value = tmp % 10;
+			if (value == d)
+			{
+				counter++;
+			}
+			tmp = tmp / 10;
+		}
+
+		if (counter == k)
+		{
+			ans++;
+		}
+
+	}
+	return ans;
+}
+
 vector<int> digit;
+
+int dp[18][2][18];
 
 vector<int> putIntoVector(int num) {
 
@@ -30,7 +60,10 @@ int countNumbersWithDigitOccuringKTimes( int index, bool flag, int counter, int 
 		}
 		return 0;
 	}
-
+	if (dp[index][flag][counter] != -1)
+	{
+		return dp[index][flag][counter] ;
+	}
 	int limit;
 	limit = digit[index];
 	if (flag == 1)
@@ -62,7 +95,7 @@ int countNumbersWithDigitOccuringKTimes( int index, bool flag, int counter, int 
 			}
 		}
 	}
-
+	dp[index][flag][counter] = ans;
 	return ans;
 }
 
@@ -78,6 +111,9 @@ signed main() {
 #endif
 
 	/*
+
+	Time complexity : 18*2*18
+	Space complexity : 18*2*18
 
 	d = 2
 	k = 1
@@ -99,12 +135,19 @@ signed main() {
 
 	int l, r, k, d;
 	cin >> l >> r >> k >> d;
-
+	//
 	digit = putIntoVector(r);
+	memset(dp, -1, sizeof(dp));
 	int ans1 = countNumbersWithDigitOccuringKTimes(0, 0, 0, d, k);
+	//
 	digit = putIntoVector(l - 1);
+	memset(dp, -1, sizeof(dp));
 	int ans2 = countNumbersWithDigitOccuringKTimes(0, 0, 0, d, k);
-	cout << ans1 - ans2;
+
+	//
+	cout << ans1 - ans2 << endl;
+	//
+	cout << countBruteForce( d,  k,  l,  r) << endl;
 
 
 }
