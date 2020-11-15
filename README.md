@@ -63,8 +63,8 @@ Two approaches :
 
 ## Binary lifting Algorithm (LCA purpose)
 
-- Maintain a dp array dp[node][x] -> 2^x distance
-- Compute the levels difference between a, and b
+- Maintain a dp array dp[node][x] -> 2^x th parent of node (distance)  
+- Compute the levels difference between a, and b  
 - Bring a and b to the same level by moving up of the difference height between a and b
 - For 10^15, we have maximum log(10^15) + 1 parents (15 +1)
 - for each i in parent
