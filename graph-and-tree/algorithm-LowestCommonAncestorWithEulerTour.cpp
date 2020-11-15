@@ -72,7 +72,8 @@ int main() {
 		8 12
 		8 13
 
-	2/ using Euler Tour
+	Time complexity : O(N)
+
 	*/
 
 	int n;
@@ -117,11 +118,6 @@ int main() {
 			minHeight = tmpHeight;
 		}
 
-	}
-
-	for (int i = 0; i <= n; ++i)
-	{
-		cout << i << " : " <<  lev[i] << endl;
 	}
 
 

@@ -99,7 +99,7 @@ int main() {
 		v2.push_back(j);
 	}
 
-	sort( v1.begin(), v1.end());
+	sort(v1.begin(), v1.end());
 
 	sort(v2.begin(), v2.end());
 
