@@ -1,12 +1,13 @@
 #include <bits/stdc++.h>
 #include <vector>
 
+#define int long long
+
 using namespace std;
 
 
 extern const int N = 1000005;
 vector<int> adjs[N + 1];
-int lev[N + 1];
 int subtree[N + 1];
 
 void init(int n) {
@@ -20,25 +21,22 @@ void init(int n) {
 	}
 }
 
-void dfs(int node, int parent, int level) {
+void dfs(int node, int parent) {
 
-
-	lev[node] = level;
-	//subtree init
-	subtree[node] = 1;
-	for (int i = 0; i < adjs[node].size(); ++i)
+	int sum = 0;
+	for (auto it : adjs[node])
 	{
-		if (adjs[node][i] != parent)
+		if (it != parent)
 		{
-			dfs(adjs[node][i], node, level + 1);
-			//subtree sum
-			subtree[node] = subtree[node] + subtree[adjs[node][i]];
-
+			dfs(it, node);
+			sum += subtree[it];
 		}
 	}
+
+	subtree[node] = 1 + sum;
 }
 
-int main() {
+signed main() {
 #ifndef ONLINE_JUDGE
 
 //for getting input from input.txt
@@ -50,18 +48,25 @@ int main() {
 
 	/*
 	input :
-	8
-	7 4
+	7
 	1 2
 	1 3
 	1 4
-	3 5
-	3 6
+	4 5
+	4 6
 	4 7
 
 	output :
-
 	array containing the size of the subtree for each node
+
+	Node 0 -> subtree size 0
+	Node 1 -> subtree size 7
+	Node 2 -> subtree size 1
+	Node 3 -> subtree size 1
+	Node 4 -> subtree size 4
+	Node 5 -> subtree size 1
+	Node 6 -> subtree size 1
+	Node 7 -> subtree size 1
 
 	*/
 
@@ -70,21 +75,17 @@ int main() {
 	int n;
 	cin >> n;
 
-
-	memset(adjs, 0, sizeof adjs);
-	memset(lev, 0, sizeof lev);
 	memset(subtree, 0, sizeof subtree);
 
 	init(n);
 
-
-	dfs(1, 0, 0);
-
+	dfs(1, 0);
 
 
-	for (int i = 0; i < n; ++i)
+
+	for (int i = 0; i <= n; ++i)
 	{
-		cout << "Subtree size " << subtree[i] << endl;
+		cout << "Node " << i << " -> subtree size " << subtree[i] << endl;
 
 	}
 
