@@ -49,9 +49,10 @@ Used to find the max sum subarray
 ### Segment tree 
 Minumum range queries
 
-## Euler Tour of a tree Algorithm
+## Euler Tour of a tree Algorithm [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/eulerTour.cpp) 
 
-Use DFS and when traversing store the node in vector and when coming back store the result as well.
+Use DFS and when traversing store the node in vector (or print the node) and when coming back store the result as well (or print the node).
+
 
 ### LCA (Lowest Common Ancestor - nearest ancestor)
 
