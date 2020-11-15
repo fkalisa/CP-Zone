@@ -49,16 +49,17 @@ Used to find the max sum subarray
 ### Segment tree 
 Minumum range queries
 
-## Euler Tour of a tree Algorithm [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/eulerTour.cpp) 
+## Euler Tour of a Tree Algorithm 
 
 Use DFS and when traversing store the node in vector (or print the node) and when coming back store the result as well (or print the node).
-
+[code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/eulerTour.cpp) 
 
 ### LCA (Lowest Common Ancestor - nearest ancestor)
 
 Between 2 numbers a and b
 Use Euler Tour Algorithm
 Use the height, the minimum height between a and b
+[code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-LowestCommonAncestor.cpp) 
 
 ### Binary lifting Algorithm (LCA purpose)
 
