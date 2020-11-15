@@ -7,6 +7,7 @@ vector<int> adjs[N + 1];
 int lev[N + 1];
 int parent[N + 1];
 
+
 void init(int n) {
 	for (int i = 0; i < n - 1; ++i)
 	{
@@ -45,6 +46,12 @@ int main() {
 
 	/*
 
+	1/ Method using the parent array :
+			- store the ancestor of 12 --> 12 8 5 3 1
+			- store the ancestor of 11 --> 11 6 3 1
+
+	check the element in commin : 3
+
 	    searching LCA of 12 and 11
 
 	    solution : 3
@@ -64,6 +71,8 @@ int main() {
 		6 11
 		8 12
 		8 13
+
+	2/ using Euler Tour
 	*/
 
 	int n;
@@ -76,6 +85,7 @@ int main() {
 	int i = 12;
 
 	std::vector<int> v1;
+
 	while (i != 1) {
 		i = parent[i];
 		v1.push_back(i);
