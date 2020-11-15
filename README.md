@@ -56,11 +56,10 @@ Use DFS and when traversing store the node in vector (or print the node) and whe
 
 ## Lowest Common Ancestor (LCA) of a Tree Algorithm
 
-Also known as nearest ancestor
-Between 2 numbers a and b in the tree 
-Use Euler Tour Algorithm
-Use the height, the minimum height between a and b
-[code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-LowestCommonAncestor.cpp) 
+Also known as nearest ancestor between 2 numbers a and b in the tree 
+Two approaches :  
+- Use Euler Tour Algorithm : the solution is the the element in between euler tour with minimum height [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-LowestCommonAncestorWithEulerTour.cpp)   
+- Use parent array : the solution is the common element [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-LowestCommonAncestor.cpp) 
 
 ## Binary lifting Algorithm (LCA purpose)
 
