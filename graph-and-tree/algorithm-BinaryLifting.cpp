@@ -2,41 +2,60 @@
 
 using namespace std;
 
+#define int long long
+
 extern const int N = 100005;
+//
 vector<int> adjs[N + 1];
+//
 int lev[N + 1];
 int par[N + 1][21];
 
+
+void init(int n) {
+	for (int i = 0; i < n - 1; ++i)
+	{
+		int u, v;
+		cin >> u >> v;
+		adjs[u].push_back(v);
+		adjs[v].push_back(u);
+	}
+}
+
 void dfs(int node, int parent, int level) {
 
+	//we always know the value of the imidiate parent
+	par[node][0] = parent;
 
-	for (int i = 0; i < 21; ++i)
+	for (int i = 1; i < 21; ++i)
 	{
-		par[node][i] = par[par[node][i - 1]][ i - 1];
+		par[node][i] = par[par[node][i - 1]][i - 1];
 	}
-	lev[node] = level + 1;
+	lev[node] = level;
 
 	for (int i = 0; i < adjs[node].size(); ++i)
 	{
 		if (adjs[node][i] != parent)
 		{
-			dfs(adjs[node][i], node, level);
+			dfs(adjs[node][i], node, level + 1);
 		}
 
 	}
 
 }
 
-void swap(int a, int b) {
+void swap(int &a, int &b) {
 	int tmp = a;
 	a = b;
 	b = tmp;
 }
 
 int lca(int u, int v) {
+
 	if (lev[u] < lev[v]) {
 		swap(u, v);
 	}
+
 
 	int dist = lev[u] - lev[v];
 	int cnt = 0;
@@ -50,6 +69,8 @@ int lca(int u, int v) {
 		dist = dist >> 1;
 	}
 
+
+
 	if (u == v) return v;
 
 
@@ -62,29 +83,35 @@ int lca(int u, int v) {
 			v = p2;
 		}
 	}
+
+
 	return par[u][0];
 }
 
 
 
-int main() {
+signed main() {
+
 #ifndef ONLINE_JUDGE
 
 //for getting input from input.txt
-	freopen("input.txt", "r", stdin);
+	freopen("../../../env/input.txt", "r", stdin);
 
 //for writting output to output.txt
-	freopen("output.txt", "w", stdout);
+	freopen("../../../env/output.txt", "w", stdout);
 #endif
 
 	/*
 
+	Time complixity : Nlog(N)
+
 	calculating the parent
 	for(int i= 0; i < 20; i ++ ){
 
-		par[node][i] = [par[node][i-1]][n-1]
-
+		par[node][i] = [par[node][i-1]][i-1]
 	}
+
+
 	if tree, time complex is O(N*20)
 
 	any number(distance) can be represented in power of 2, that is why we store parents in power of 2
@@ -108,11 +135,43 @@ int main() {
 
 	- the immidiate parent is the LCA
 
+	Example LCA(11, 12)
+
+	input :
+
+	13
+	1 2
+	1 3
+	1 4
+	3 5
+	3 6
+	5 7
+	5 8
+	6 9
+	6 10
+	6 11
+	8 12
+	8 13
+
+
+	Output :
+
+	3
+
 	*/
 
 
+	int n;
+	cin >> n;
 
+	memset(lev, -1, sizeof (lev));
+	memset(par, -1, sizeof (par));
 
+	init(n);
+
+	dfs(1, 0, 1);
+
+	cout << lca(11, 12);
 
 	return 0;
 
