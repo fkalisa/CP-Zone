@@ -55,19 +55,59 @@ signed main() {
 	/*
 
 	input :
+	 										9
+											|
+	 1 - 2 								6 - 7 - 8
+	 |
+	 3 - 4 - 5
 
 
-	output :
+	9 7
+	1 2
+	1 3
+	3 4
+	4 5
+	6 7
+	7 9
+	7 8
+	3
+	7
+	4
+	6
 
+	output : how many element in the componet
 
+		7 -> 4
+		4 -> 5
+		6 -> 4
 	*/
 
-	int n = 8;
+	int n, m;
+	cin >> n >> m;
 
 	for (int i = 1; i <= n; ++i)
 	{
 		parent[i] = i;
 		size[i] = 1;
+	}
+
+	for (int i = 0; i < m; ++i)
+	{
+		int u, v;
+		cin >> u >> v;
+
+		cout << u << " " << v << endl;
+		union1(u, v);
+	}
+
+	int q;
+	cin >> q;
+
+	for (int i = 0; i < q; ++i)
+	{
+		int k;
+		cin >> k;
+		cout << size[findParent(k)] << endl;
 	}
 
 
