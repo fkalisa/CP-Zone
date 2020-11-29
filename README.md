@@ -78,3 +78,11 @@ Two approaches :
 ##### Selection Sort
 
 ##### Merge Sort
+
+## Disjoint Set Union
+
+##### Minimum Spanning Tree MST
+
+
+
+
