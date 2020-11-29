@@ -81,7 +81,7 @@ Two approaches :
 
 ## Disjoint Set Union
 
-##### Minimum Spanning Tree MST
+##### Minimum Spanning Tree MST - Kruskal Algorithm
 
 
 
