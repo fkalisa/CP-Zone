@@ -79,7 +79,7 @@ Two approaches :
 
 ##### Merge Sort
 
-## Disjoint Set Union
+## Disjoint Set Union (Union find)
 
 ##### Minimum Spanning Tree MST - Kruskal Algorithm
 
