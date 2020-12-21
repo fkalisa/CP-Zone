@@ -25,6 +25,9 @@ void build(int ind, int low, int high) {
 
 }
 
+/*
+	Time complexity : log(N)
+*/
 int query(int ind, int low, int high, int l, int r) {
 
 	// inside - l low high r
@@ -50,15 +53,20 @@ int query(int ind, int low, int high, int l, int r) {
 	return max(left, right);
 }
 
+/*
+	Time complexity : log(N)
+*/
+
 void update(int ind, int value, int i, int low, int high)
 {
 	if (high == low)
 	{
-		seg[ind] += value;
+		seg[ind] = value;
+		arr[i] = value;
 		return;
 	}
 	int middle = (high + low) / 2;
-	if (i < middle) {
+	if (i <= middle) {
 		update( ind * 2 + 1,  value, i, low,  middle);
 	} else {
 		update( ind * 2 + 2,  value, i, middle + 1,  high);
@@ -107,13 +115,11 @@ int main() {
 
 	build(0, 0, n - 1);
 
-	query(0, 0, n - 1, l, r);
+	cout << query(0, 0, n - 1, l - 1, r - 1) << endl;
 
-	cout << query(0, 0, n - 1, l, r) << endl;
+	update(0, 11, 4, 0, n - 1);
 
-	update(0, 6, 4, 0, n - 1);
-
-	cout << query(0, 0, n - 1, l, 4) << endl;
+	cout << query(0, 0, n - 1, l - 1, r - 1) << endl;
 
 	return 0;
 }

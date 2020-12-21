@@ -4,7 +4,7 @@ using namespace std;
 
 extern const int N = 10000;
 int arr[N + 1];
-int seg[  4 * N + 5];
+int seg[4 * N + 5];
 
 /*
 Time complexity O(4*n)
@@ -21,10 +21,9 @@ void build(int ind, int low, int high) {
 	build( ind * 2 + 1,  low,  middle);
 	build( ind * 2 + 2,   middle + 1, high);
 
-	seg[ind] = seg[ind * 2 + 1] + seg[ind * 2 + 2];
+	seg[ind] = min(seg[ind * 2 + 1], seg[ind * 2 + 2]);
 
 }
-
 /*
 	Time complexity : log(N)
 */
@@ -43,7 +42,7 @@ int query(int ind, int low, int high, int l, int r) {
 	// low high l r , l r low high
 
 	if (high < l || low > r) {
-		return 0;
+		return INT_MAX;
 	}
 
 	int middle = (low + high) / 2;
@@ -51,28 +50,31 @@ int query(int ind, int low, int high, int l, int r) {
 
 	int left = query(2 * ind + 1, low, middle, l, r);
 	int right = query(2 * ind + 2, middle + 1, high , l, r);
-	return left + right;
+	return min(left, right);
 }
-
 /*
 	Time complexity : log(N)
 */
+void update(int ind, int i, int value, int low, int high) {
 
-void update(int ind, int value, int i, int low, int high)
-{
-	if (high == low)
+
+	if (low == high)
 	{
-		seg[ind] += value;
+		seg[ind] = value;
+		arr[i] = value;
 		return;
 	}
-	int middle = (high + low) / 2;
+	int middle = (low + high) / 2;
+
 	if (i <= middle) {
-		update( ind * 2 + 1,  value, i, low,  middle);
+		update( ind * 2 + 1 , i, value,  low,  middle);
+
 	} else {
-		update( ind * 2 + 2,  value, i, middle + 1,  high);
+		update( ind * 2 + 2, i, value,    middle + 1, high);
 	}
 
-	seg[ind] = seg[ind * 2 + 1] + seg[ind * 2 + 2] ;
+	seg[ind] = min(seg[ind * 2 + 1], seg[ind * 2 + 2] );
+
 }
 
 /*
@@ -98,9 +100,10 @@ int main() {
 		2 5 6 1 0 2 1 7
 		1 6
 
-		output sum (sum between 1 and 6):
+		output
 
-		15
+		0
+		0
 	*/
 
 	int n;
@@ -116,11 +119,13 @@ int main() {
 	build(0, 0, n - 1);
 
 
-	cout << query(0, 0, n - 1, l, r) << endl;
+	cout << query(0, 0, n - 1, l - 1, r - 1) << endl;
 
-	update(0, 10, 4, 2, 7);
 
-	cout << query(0, 0, n - 1, l, r) << endl;
+	update(0, 4, 10, 1, 7);
+
+	cout << query(0, 0, n - 1, l - 1, r - 1) << endl;
+
 
 	return 0;
 }
