@@ -46,8 +46,15 @@ Used to find the max sum subarray
 ##### Merge Sort (see Sorting Algorithms)
 ##### Meet in the middle Algorithm
 
-### Segment tree 
+## Segment tree 
 Minumum range queries
+
+## Fenwick tree
+
+- Fenwick tree is represented as an array  
+- Fenwick tree is zero based index  
+- Fenwick tree consist of sum (range) and update  
+- Fenwick tree is batter compared to segment tree with regard space complexity  
 
 ## Euler Tour of a Tree Algorithm 
 
