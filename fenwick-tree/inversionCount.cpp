@@ -4,8 +4,7 @@ using namespace std;
 
 #define int long long
 
-int fen[10000007];
-int freq[10000007];
+int fen[10000007]; // fen is playing the role of frequency array
 int arr[10000007];
 
 
@@ -78,7 +77,6 @@ signed main() {
 		cin >> n;
 
 		memset(fen, 0, sizeof fen);
-		memset(freq, 0, sizeof freq );
 		memset(arr, 0, sizeof arr);
 
 		/*
@@ -87,7 +85,6 @@ signed main() {
 		for (int i = 1; i <= n; ++i)
 		{
 			cin >> arr[i];
-			freq[arr[i]]++;
 			update( arr[i], 1, n );
 		}
 
@@ -97,7 +94,6 @@ signed main() {
 		*/
 		for (int i = 1; i <= n; ++i)
 		{
-			freq[arr[i]]--;
 			update( arr[i], -1, n ); // do not forget
 			total = total + sum(arr[i] - 1);
 		}
