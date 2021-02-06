@@ -50,15 +50,18 @@ Used to find the max sum subarray
 
 - In a graph, we have N nodes and M edges 
 - In a graph, any node can be root  
-- In a graph, we have a visited array  
+- In a graph, we have a visited array to avoid infinite traversal
 - Every tree is a graph !!
 - A graph can be directed or undirected
 - Applications :
 
     - Number of connected components 
-    - Detect a cycle in undirected graph  [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInUndirectedGraph.cpp)  
-    - Detect a cycle in directed graph  [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInDirectedGraph.cpp)  
-    
+    - Detect a cycle in undirected graph  [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInUndirectedGraph.cpp) 
+      - HowTo : the node is not parent and it has been visited  
+    - Detect a cycle in directed graph  
+      - HowTo :
+          - Use two visited array [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInDirectedGraph-withTwoVisitedArrays.cpp)  
+          - Use 3 colors (white, gray, black)[code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInDirectedGraph.cpp)  
 
 ## Tree 
 - In a tree, we have N nodes and N-1 edges  
