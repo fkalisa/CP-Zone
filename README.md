@@ -67,11 +67,12 @@ Used to find the max sum subarray
       - HowTo :
           - Use a color array, if the adjacent element color is equal to the curent color, the graph is not bipartite
           - Check if there is an odd length cycle in the graph -> Not a bipartite graph
-    - Topological sort (only possible with DAG (Directed Acyclic Graph) -> No cycle )
+    - Topological sort (only possible with DAG (Directed Acyclic Graph) -> No cycle ), 
       - HowTo :
           - Application : linear ordering of vertices  
-          - [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-01.cpp)  
-          - [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-02.cpp)  
+          - It starts with node which has indegree 0 -> no coming edge
+          - Using a stack[code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingStack.cpp)  
+          - Using indegrees array [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingIndegreesArray.cpp)  
       
 
 ## Tree 
