@@ -56,12 +56,16 @@ Used to find the max sum subarray
 - Applications :
 
     - Number of connected components 
+      - HowTo : the number of times DFS/BFS is called
     - Detect a cycle in undirected graph  [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInUndirectedGraph.cpp) 
       - HowTo : the node is not parent and it has been visited  
     - Detect a cycle in directed graph  
       - HowTo :
           - Use two visited array [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInDirectedGraph-withTwoVisitedArrays.cpp)  
           - Use 3 colors (white, gray, black)[code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInDirectedGraph.cpp)  
+    - Bipartite (consecutive nodes have different colors) [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInDirectedGraph.cpp)  
+      - HowTo :
+          - Use a color array, if the adjacent element color is equal to the curent color, the graph is not bipartite (t)
 
 ## Tree 
 - In a tree, we have N nodes and N-1 edges  
