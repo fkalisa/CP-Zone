@@ -66,7 +66,7 @@ Used to find the max sum subarray
     - Bipartite (consecutive nodes have different colors) [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/bipartiteGraph.cpp)  
       - HowTo :
           - Use a color array, if the adjacent element color is equal to the curent color, the graph is not bipartite
-          - Check if there is an odd length cycle in the graph
+          - Check if there is an odd length cycle in the graph ==> Not a bipartite graph
 
 ## Tree 
 - In a tree, we have N nodes and N-1 edges  
