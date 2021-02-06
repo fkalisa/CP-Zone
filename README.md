@@ -63,9 +63,10 @@ Used to find the max sum subarray
       - HowTo :
           - Use two visited array [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInDirectedGraph-withTwoVisitedArrays.cpp)  
           - Use 3 colors (white, gray, black)[code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInDirectedGraph.cpp)  
-    - Bipartite (consecutive nodes have different colors) [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInDirectedGraph.cpp)  
+    - Bipartite (consecutive nodes have different colors) [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/bipartiteGraph.cpp)  
       - HowTo :
-          - Use a color array, if the adjacent element color is equal to the curent color, the graph is not bipartite (t)
+          - Use a color array, if the adjacent element color is equal to the curent color, the graph is not bipartite
+          - Check if there is an odd length cycle in the graph
 
 ## Tree 
 - In a tree, we have N nodes and N-1 edges  
