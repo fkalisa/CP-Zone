@@ -81,7 +81,7 @@ signed main() {
 	4 5
 	5 1
 
-	Output2 : 1
+	Output2 : 0
 
 
 	*/
