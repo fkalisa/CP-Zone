@@ -75,6 +75,9 @@ int main() {
 
 
 	/*
+	
+	in tree, tha parent node is used to avoid infinite traversal
+	
 	input :
 
 	6
