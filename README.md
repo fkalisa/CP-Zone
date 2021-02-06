@@ -50,6 +50,7 @@ Used to find the max sum subarray
 
 - In a graph, we have N nodes and M edges 
 - In a graph, any node can be root  
+- In a graph, we have a visited array  
 - Every tree is a graph !!
 - A graph can be directed or undirected
 - Applications :
@@ -62,7 +63,9 @@ Used to find the max sum subarray
 ## Tree 
 - In a tree, we have N nodes and N-1 edges  
 - In a tree, we have a root
+- In a tree, we carry a parent to avoid infinite traversal  
 - A tree is not a graph
+
 
 ## Segment tree 
 Minumum range queries
