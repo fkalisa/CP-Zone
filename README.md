@@ -46,6 +46,24 @@ Used to find the max sum subarray
 ##### Merge Sort (see Sorting Algorithms)
 ##### Meet in the middle Algorithm
 
+## Graph
+
+- In a graph, we have N nodes and M edges 
+- In a graph, any node can be root  
+- Every tree is a graph !!
+- A graph can be directed or undirected
+- Applications :
+
+    - Number of connected components 
+    - Detect a cycle in undirected graph  [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInUndirectedGraph.cpp)  
+    - Detect a cycle in directed graph  [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/cycleInDirectedGraph.cpp)  
+    
+
+## Tree 
+- In a tree, we have N nodes and N-1 edges  
+- In a tree, we have a root
+- A tree is not a graph
+
 ## Segment tree 
 Minumum range queries
 
