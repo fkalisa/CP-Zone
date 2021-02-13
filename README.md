@@ -71,7 +71,7 @@ Used to find the max sum subarray
       - HowTo :
           - Application : linear ordering of vertices  
           - It starts with node which has indegree 0 -> no coming edge
-          - Using a stack[code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingStack.cpp)  
+          - Using a stack [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingStack.cpp)  
           - Using indegrees array [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingIndegreesArray.cpp)  
       
 
