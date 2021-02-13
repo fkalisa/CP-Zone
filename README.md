@@ -49,6 +49,7 @@ Used to find the max sum subarray
 ## Graph
 
 - In a graph, we have N nodes and M edges 
+- In a graph, we need to create an adjacency list
 - In a graph, any node can be root  
 - In a graph, we have a visited array to avoid infinite traversal
 - Every tree is a graph !!
@@ -73,7 +74,7 @@ Used to find the max sum subarray
           - It starts with node which has indegree 0 -> no coming edge
           - Using a stack [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingStack.cpp)  
           - Using indegrees array [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingIndegreesArray.cpp)  
-      
+          - Fox and Names [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/FoxAndNames.cpp)  
 
 ## Tree 
 - In a tree, we have N nodes and N-1 edges  
