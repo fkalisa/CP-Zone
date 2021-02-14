@@ -85,8 +85,9 @@ Used to find the max sum subarray
     - Dijkstra algorithm Nlog(N) : shortest path between source and destination on weighted graph
       - Another alogorithm to find the shortest path is : Floyd–Warshall algorithm
       - HowTo :
-          - You need distance array populated with infinity except the source node which is polulated with 0
-          - You need a priority queue(distance, node)
+          - Step1: you need distance array populated with infinity except the source node which is polulated with 0
+          - Step2: you need a priority queue(distance, node)  
+          - Step3: you need to iterate until the priority queue is empty  
           - [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-dijkstra.cpp)  
         
           
