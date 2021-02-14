@@ -84,11 +84,15 @@ Used to find the max sum subarray
             TODO  
     - Dijkstra algorithm Nlog(N) : shortest path between source and destination on weighted graph
       - Another alogorithm to find the shortest path is : Floyd–Warshall algorithm
+      - if the distance of the destination is infinity or the parent destination is -1, it means you never reached the destination
       - HowTo :
           - Step1: you need distance array populated with infinity except the source node which is polulated with 0
           - Step2: you need a priority queue(distance, node)  
           - Step3: you need to iterate until the priority queue is empty  
-          - [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-dijkstra.cpp)  
+          - Code using a pair[code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-dijkstra-1.cpp)  
+          - Code using a map to store the weight [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-dijkstra-2.cpp)  
+          - Code print the node traversed using the parent array [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-dijkstra.cpp)  
+
         
           
 
