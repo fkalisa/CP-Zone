@@ -59,45 +59,26 @@ signed main() {
 	/*
 
 	inputs :
-	14 36
+	14 19
 	a b
 	a c
-	b a
 	b c
 	b e
-	b f
-	c a
-	c b
 	c d
-	c h
-	d c
 	d e
 	d f
-	e b
-	e d
-	f d
-	f b
-	h c
-	h i
-	h j
+	b f
+	c h
 	i h
+	h j
+	j l
 	i j
 	i k
-	j h
-	j i
-	j l
-	k i
 	k l
 	k m
-	l k
-	l j
-	m k
 	m n
-	m o
-	n m
 	n o
 	o m
-	o n
 
 
 	output
