@@ -78,12 +78,17 @@ Used to find the max sum subarray
           - Fox and Names [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/FoxAndNames.cpp)  
     - Bridges in the graph : a bridge is an edge when taken off, it creates one or more components in the graph
       - HowTo :
-        - keep the parent, the low and nodeTime array and a timer [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/bridge.cpp)  
+          - keep the parent, the low and nodeTime array and a timer [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/bridge.cpp)  
     - Articulation points in the graph : articulation is a node when taken off, it creates one or more components in the graph
-        - HowTo :
+      - HowTo :
             TODO  
     - Dijkstra algorithm Nlog(N) : shortest path between source and destination on weighted graph
-        - HowTo :
+      - Another alogorithm to find the shortest path is : Floyd–Warshall algorithm
+      - HowTo :
+          - You need distance array populated with infinity except the source node which is polulated with 0
+          - You need a priority queue(distance, node)
+          - [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-dijkstra.cpp)  
+        
           
 
 ## Tree 
