@@ -75,9 +75,12 @@ Used to find the max sum subarray
           - Using a stack [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingStack.cpp)  
           - Using indegrees array [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingIndegreesArray.cpp)  
           - Fox and Names [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/FoxAndNames.cpp)  
-    - Bridges in graph : a bridge is an edge when taken off creates one or more components in the graph
+    - Bridges in the graph : a bridge is an edge when taken off, it creates one or more components in the graph
       - HowTo :
         - keep the parent, the low and nodeTime array and a timer [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/bridge.cpp)  
+    - Articulation points in the graph : articulation is a node when taken off, it creates one or more components in the graph
+        - HowTo :
+            TODO  
 
 ## Tree 
 - In a tree, we have N nodes and N-1 edges  
