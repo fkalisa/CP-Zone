@@ -81,6 +81,9 @@ Used to find the max sum subarray
     - Articulation points in the graph : articulation is a node when taken off, it creates one or more components in the graph
         - HowTo :
             TODO  
+    - Dijkstra algorithm :
+        - HowTo :
+          
 
 ## Tree 
 - In a tree, we have N nodes and N-1 edges  
