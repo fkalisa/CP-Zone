@@ -82,7 +82,7 @@ Used to find the max sum subarray
     - Articulation points in the graph : articulation is a node when taken off, it creates one or more components in the graph
         - HowTo :
             TODO  
-    - Dijkstra algorithm : shortest path between source and destination on weighted graph
+    - Dijkstra algorithm Nlog(N) : shortest path between source and destination on weighted graph
         - HowTo :
           
 
