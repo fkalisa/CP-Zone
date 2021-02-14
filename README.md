@@ -53,6 +53,7 @@ Used to find the max sum subarray
 - In a graph, any node can be root  
 - In a graph, we have a visited array to avoid infinite traversal
 - Every tree is a graph !!
+- Every DFS call run in O(N)
 - A graph can be directed or undirected
 - Applications :
 
@@ -81,7 +82,7 @@ Used to find the max sum subarray
     - Articulation points in the graph : articulation is a node when taken off, it creates one or more components in the graph
         - HowTo :
             TODO  
-    - Dijkstra algorithm :
+    - Dijkstra algorithm Nlog(N) : shortest path between source and destination on weighted graph
         - HowTo :
           
 
@@ -90,6 +91,7 @@ Used to find the max sum subarray
 - In a tree, we have a root
 - In a tree, we carry a parent to avoid infinite traversal  
 - A tree is not a graph
+- Applications :
 
 
 ## Segment tree 
