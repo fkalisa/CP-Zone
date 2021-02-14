@@ -89,9 +89,9 @@ Used to find the max sum subarray
           - Step1: you need distance array populated with infinity except the source node which is polulated with 0
           - Step2: you need a priority queue(distance, node)  
           - Step3: you need to iterate until the priority queue is empty  
-          - Code using a pair[code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-dijkstra-1.cpp)  
-          - Code using a map to store the weight [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-dijkstra-2.cpp)  
-          - Code print the node traversed using the parent array [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-dijkstra.cpp)  
+          - Dijkstra using a pair [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-dijkstra-1.cpp)  
+          - Dijkstra using a map to store the weights [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-dijkstra-2.cpp)  
+          - Dijkstra printing the node traversed using the parent array [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/algorithm-dijkstra-3-20C.cpp)  
 
         
           
