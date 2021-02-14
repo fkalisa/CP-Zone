@@ -53,6 +53,7 @@ Used to find the max sum subarray
 - In a graph, any node can be root  
 - In a graph, we have a visited array to avoid infinite traversal
 - Every tree is a graph !!
+- Every DFS call run in O(N)
 - A graph can be directed or undirected
 - Applications :
 
@@ -90,6 +91,7 @@ Used to find the max sum subarray
 - In a tree, we have a root
 - In a tree, we carry a parent to avoid infinite traversal  
 - A tree is not a graph
+- Applications :
 
 
 ## Segment tree 
