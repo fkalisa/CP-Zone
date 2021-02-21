@@ -2,12 +2,6 @@
 
 using namespace std;
 
-/*
-
-	1/ we do not need 3 colors, we can use visited flag and previous
-
-*/
-
 extern const int V = 6;
 extern const int E = 6;
 
@@ -73,7 +67,7 @@ int main() {
 
 	Output : 1
 
-	Explantion : we came to a visited node which is different from the previous
+	Explantion : we came to a visited node which is different from the previous(parent)
 
 	*/
 
