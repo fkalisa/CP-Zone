@@ -61,6 +61,8 @@ signed main() {
 		- visited array
 		- color array
 		- no need to carry the parent array
+	
+	Application : test an odd length cycle, it is not a bipartite
 
 	input1 :
 
