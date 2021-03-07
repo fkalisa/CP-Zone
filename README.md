@@ -76,14 +76,14 @@ Used to find the max sum subarray
           - Using a stack [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingStack.cpp)  
           - Using indegrees array [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingIndegreesArray.cpp)  
           - Fox and Names [problem](https://codeforces.com/problemset/problem/510/C) [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/FoxAndNames.cpp)  
-    - Bridges in the graph : a bridge is an edge when taken off, it creates one or more components in the graph
+    - [Bridges](https://github.com/fkalisa/CP-Zone/blob/master/images/bridge.png) in the graph : a bridge is an edge when taken off, it creates one or more components in the graph
       - HowTo :
           - keep the parent, the low and nodeTime array and a timer [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/bridge.cpp)  
     - Articulation points in the graph : articulation is a node when taken off, it creates one or more components in the graph
       - HowTo :
             TODO  
-    - Dijkstra algorithm Nlog(N) : shortest path between source and destination on weighted graph
-      - Another alogorithm to find the shortest path is : Floyd–Warshall algorithm
+    - [Dijkstra](https://github.com/fkalisa/CP-Zone/blob/master/images/dijkstra.png) algorithm Nlog(N) : shortest path between source and destination on weighted graph
+      - Another algorithm to find the shortest path is : Floyd–Warshall algorithm
       - if the distance of the destination is infinity or the parent destination is -1, it means you never reached the destination
       - HowTo :
           - Step1: you need distance array populated with infinity except the source node which is polulated with 0
