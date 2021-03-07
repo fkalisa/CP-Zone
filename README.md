@@ -83,7 +83,8 @@ Used to find the max sum subarray
       - HowTo :
             TODO  
     - [Dijkstra](https://github.com/fkalisa/CP-Zone/blob/master/images/dijkstra.png) algorithm Nlog(N) : shortest path between source and destination on weighted graph
-      - Another algorithm to find the shortest path is : Floyd–Warshall algorithm
+      - Another algorithm to find the shortest path is : Floyd–Warshall algorithm 
+        - Application of Floyd–Warshall algorithm : any source to any destination
       - if the distance of the destination is infinity or the parent destination is -1, it means you never reached the destination
       - HowTo :
           - Step1: you need distance array populated with infinity except the source node which is polulated with 0
