@@ -18,10 +18,14 @@ void init(int m) {
 		cin >> u >> v;
 		adjs[u - 'a'].push_back(v - 'a');
 		adjs[v - 'a'].push_back(u - 'a');
+
+		cout << u << " - " << v << endl;
 	}
 }
 
-void dfs(int node, int par = 0) {
+
+
+void dfs(int node, int par = -1) {
 
 	visited[node] = 1;
 	low[node] = entryTime[node] = timer++;
@@ -38,7 +42,7 @@ void dfs(int node, int par = 0) {
 			dfs(it, node);
 			low[node] = min(low[node], low[it]);
 			if (low[it] >  entryTime[node]) {
-				cout << (char)(it + 'a') << " " << (char)(node + 'a') << endl;
+				cout << "bridge : " << (char)(it + 'a') << " " << (char)(node + 'a') << endl;
 			}
 
 		}
@@ -91,7 +95,8 @@ signed main() {
 
 	init(m);
 
-	for (int i = 1; i <= n; ++i)
+
+	for (int i = 0; i <= n; ++i)
 	{
 		if (!visited[i]) {
 			dfs(i);
