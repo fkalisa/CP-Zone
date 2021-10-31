@@ -61,7 +61,7 @@ int main() {
 #endif
 	/*
 
-	Using indegree array
+	Using indegree array - BFS
 	for DAG : Direct Acyclic Graph
 
 
@@ -82,7 +82,7 @@ int main() {
 
 	4 5 2 0 3 1
 
-	application : compiler, dependancy resolution, ...
+	application : compiler, dependency resolution, ...
 
 
 	Detect a cycle use :
