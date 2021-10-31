@@ -73,8 +73,8 @@ Used to find the max sum subarray
       - HowTo :
           - Application : linear ordering of vertices  
           - It starts with node which has indegree 0 -> no coming edge
-          - Using a stack [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingStack.cpp)  
-          - Using indegrees array [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingIndegreesArray.cpp)  
+          - Using a stack - DFS [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingStack.cpp)  
+          - Using indegrees array - BFS [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingIndegreesArray.cpp)  
           - Fox and Names [problem](https://codeforces.com/problemset/problem/510/C) [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/FoxAndNames.cpp)  
     - [Bridges](https://github.com/fkalisa/CP-Zone/blob/master/images/bridge.png) in the graph : a bridge is an edge when taken off, it creates one or more components in the graph
       - HowTo :
