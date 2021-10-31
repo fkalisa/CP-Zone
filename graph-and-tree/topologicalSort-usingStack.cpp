@@ -47,6 +47,7 @@ int main() {
 	/*
 
 	Topo using a stack
+	DFS
 
 	5 2
 	5 0
