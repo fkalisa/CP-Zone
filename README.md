@@ -69,7 +69,7 @@ Used to find the max sum subarray
       - HowTo :
           - Use a color array, if the adjacent element color is equal to the curent color, the graph is not bipartite
           - Application : Check if there is an odd length cycle in the graph -> Not a bipartite graph
-    - Topological sort (only possible with DAG (Directed Acyclic Graph) -> No cycle ), 
+    - Topological sort (only possible with DAG (Directed Acyclic Graph) -> No cycle ), TopoSort can be used to detect a cycle (indegrees case) 
       - HowTo :
           - Application : linear ordering of vertices  
           - It starts with node which has indegree 0 -> no coming edge
