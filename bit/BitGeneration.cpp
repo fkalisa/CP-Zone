@@ -25,7 +25,7 @@ int main() {
 
 		for (int j = 0; j < n; ++j) // 2^N
 		{
-			if (i & (1 < j))
+			if (i & (1 << j))
 			{
 				cout << 1;
 			} else {
