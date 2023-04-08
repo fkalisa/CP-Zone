@@ -74,7 +74,7 @@ Used to find the max sum subarray
           - Application : linear ordering of vertices
           - 2 approches :
             - indegree: you starts with node which has indegree 0 -> no coming edge, update the indegree map (**Kahn's algorithm**) - BFS [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingIndegreesArray.cpp)  
-             - Using a stack - DFS [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingStack.cpp) - called pre visited and post visited - this can allow to detect cycle ass (in base condition if a node is visited but visite is at pre -> we have a cycle, we can return, it a node is visted but visite is at post we can return)
+             - Using a stack - DFS [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingStack.cpp) - called pre visited and post visited (visited is a map) - this can allow to detect cycle in DAG (in base condition if a node is visited but visited is at "pre" -> we have a cycle, we can return, it a node is visted but visite is at "post" we can return)
          
           - Example:
               - Fox and Names [problem](https://codeforces.com/problemset/problem/510/C) [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/FoxAndNames.cpp)  
