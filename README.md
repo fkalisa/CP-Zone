@@ -71,11 +71,13 @@ Used to find the max sum subarray
           - Application : Check if there is an odd length cycle in the graph -> Not a bipartite graph
     - Topological sort (only possible with DAG (Directed Acyclic Graph) -> No cycle ), TopoSort can be used to detect a cycle (indegrees case) 
       - HowTo :
-          - Application : linear ordering of vertices  
-          - It starts with node which has indegree 0 -> no coming edge
-          - Using a stack - DFS [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingStack.cpp)  
-          - Using indegrees array(also known as **Kahn's algorithm**) - BFS [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingIndegreesArray.cpp)  
-          - Fox and Names [problem](https://codeforces.com/problemset/problem/510/C) [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/FoxAndNames.cpp)  
+          - Application : linear ordering of vertices
+          - 2 approches :
+            - indegree: you starts with node which has indegree 0 -> no coming edge, update the indegree map (**Kahn's algorithm**) - BFS [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingIndegreesArray.cpp)  
+          - Using a stack - DFS [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/topologicalSort-usingStack.cpp) - called pre visited and post visited - this can allow to detect cycle ass (in base condition if a node is visited but visite is at pre -> we have a cycle, we can return, it a node is visted but visite is at post we can return)
+         
+          - Example:
+              - Fox and Names [problem](https://codeforces.com/problemset/problem/510/C) [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/FoxAndNames.cpp)  
     - [Bridges](https://github.com/fkalisa/CP-Zone/blob/master/images/bridge.png) in the graph : a bridge is an edge when taken off, it creates one or more components in the graph
       - HowTo :
           - keep the parent, the low and nodeTime array and a timer [code](https://github.com/fkalisa/CP-Zone/blob/master/graph-and-tree/bridge.cpp)  
