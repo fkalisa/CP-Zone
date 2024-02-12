@@ -2,7 +2,20 @@
 using namespace std;
 
 
+void printSubstring2(string arr[], int n) {
 
+
+	for (int i = 0; i < n; ++i)
+	{
+		string tmp ="";
+		for (int j = i; j < n; ++j)
+		{
+			tmp= tmp+ arr[j];
+			cout << tmp;
+			cout << endl;
+		}
+	}
+}
 
 void printSubstring(string arr[], int n) {
 
